@@ -71,7 +71,6 @@ impl TryFrom<&[i16]> for Color {
     type Error = IntoColorError;
     fn try_from(slice: &[i16]) -> Result<Self, Self::Error> {
         //todo
-        let u8_range = 0..256;
         if slice.len() != 3 {
             return Err(IntoColorError::BadLen)
         }
